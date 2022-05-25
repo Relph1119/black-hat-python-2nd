@@ -576,3 +576,4 @@ MigrationBackup/
 FodyWeavers.xsd
 
 .idea/
+/codes/ch05/wordpress/
