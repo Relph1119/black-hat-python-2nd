@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
 """
-@author: HuRuiFeng
 @file: mapper.py
 @time: 2022/5/24 14:10
 @project: black-hat-python-2ed

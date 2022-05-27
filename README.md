@@ -1,4 +1,4 @@
-# 《Python黑帽子-黑客与渗透测试编程之道》笔记
+# 《Python黑帽子-黑客与渗透测试编程之道》阅读笔记
 
 &emsp;&emsp;《Python黑帽子-黑客与渗透测试编程之道》先介绍了网络方面的基础知识和原始socket、著名的网络工具scapy；通过讲解python的网络库（urllib、requests、lxml和BeautifulSoup）的使用，扫描网络系统结构、破解目录和文件位置、破解HTML登录表单等场景；介绍Burp Suite并编写攻击插件，并基于GitHub服务的C&C通信的木马编写，讨论在Windows下的木马常用功能，以及Windows的系统提权；还介绍了数据渗漏和攻击取证相关的渗透。
 
@@ -82,3 +82,27 @@ pip install -r requirements.txt
 ```shell
 pip freeze > requirements.txt
 ```
+
+## 阅读总结
+&emsp;&emsp;本书属于渗透测试入门实战级别，每一章节都配备了大量的代码，并采用Kali虚拟机进行渗透测试实战。
+1. 第1章，主要从搭建Python编程环境开始，搭建Kali Linux虚拟机环境，并搭建VS Code IDE集成开发环境，运行hello.py程序。
+2. 第2章，主要介绍了`socket`库的网络编程基本知识，包括基于`socket`的TCP客户端/服务端、UDP客户端的实现，自编程实现`netcat`，通过实现TCP代理连接FTP服务器，基于`Paramiko`实现SSH通信，并简要介绍了SSH隧道的基本知识。
+3. 第3章，主要介绍了流量嗅探器的实现，使用`socket`实现简单的嗅探器，并逐步实现IP、ICMP层的解码。
+4. 第4章，主要基于`Scapy`库实现邮箱身份凭证窃取（主要基于BPF语法对常用邮件协议端口进行监听）、ARP投毒、pcap文件处理（对数据包中的图片使用`OpenCV`库对人脸进行检测）。
+5. 第5章，主要介绍了常见的Web攻击，包括基本工具库使用（`urllib`、`requests`、`lxml`、`beautifulsoup4`）、基于`requests`实现拓印WordPress系统结构（检测资源的连接情况）、基于`requests`和字典文件实现目录和文件位置的暴力破解、基于`lxml`和`request`实行HTML登录表单（通过3个阶段：初始化阶段、循环阶段、请求阶段）。
+6. 第6章，主要基于`Jython`编写Burp Suite插件（只能使用Python2版本，不支持Python3.x），包括Burp模糊测试、调用Bing搜索、利用网页内容生成暴破字典（读取HTTP响应数据，从文本数据中剥离HTML标签，并利用正则表达式抽取内容生成密码字典）。
+7. 第7章，主要基于在GitHub上构建木马模块仓库，并利用`github3`库连接GitHub，并从其自动下载python代码，import到受害机器的Python Lib库中，执行木马脚本。
+8. 第8章，主要基于`pyWinHook`和`pywin32`库对Windows进行木马攻击，实现键盘记录（通过抓取活跃窗口和相关的进程ID，并使用`HookKeyboard`方法进行键盘监控）、屏幕截取（基于win32gui获取屏幕大小进行截图）、执行shellcode（将shellcode写入内存缓冲区，并构建函数指针，执行函数）、沙箱检测（监控键盘输入和鼠标单击事件，根据设定的阈值判断是否处于沙箱中）
+9. 第9章，主要实现渗漏加密数据的攻击，包括加密解码（基于`zlib`库实现RSA的文件内容加密解码）、电子邮件渗漏、文件传输渗漏（基于`ftplib`库连接FTP服务器）、Web服务器渗漏，最后使用字典调度的方式将前面的几个工具合在一起，对pastebin.com网站进行渗漏
+10. 第10章，主要介绍Windows系统提权的方法，首先编写并在Windows中注册受害服务（主要是模拟文件的拷贝和删除操作），利用WMI监控进程（将进程的信息打印输出），并基于Windows令牌权限获取进程的权限，最后对文件目录进行监控，对受害服务的操作进行监控（还可以在其中进行代码注入，从而获得SYSTEM权限）
+11. 第11章，主要利用`Volatility`工具，通过对示例Window系统快照的分析：
+- 使用`windows.info`插件分析设备基本情况
+- 使用`registry.printkey`插件读取注册表键的所有键值
+- 使用`windows.cmdline`插件列出每个进程的命令行参数分析用户当时的行为与意图
+- 使用`windows.pslist`插件列出在运行的所有进程的详细信息
+- 使用`windows.pstree`插件获取进程的继承关系
+- 使用`windows.hashdump`插件查看用户密码
+- 使用`windows.malfind`插件查找同时具有读、写和执行三个权限的内存区域，从而分析病毒的进程
+- 使用`windows.netscan`插件列出持有的网络连接，分析可疑的连接
+
+最后实现一个Volatility插件，用于找出ASLR（地址空间布局随机化）保护的进程。

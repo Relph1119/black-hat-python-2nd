@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
 """
-@author: HuRuiFeng
 @file: bruter.py
 @time: 2022/5/24 16:02
 @project: black-hat-python-2ed

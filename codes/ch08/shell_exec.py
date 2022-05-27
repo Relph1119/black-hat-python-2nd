@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
 """
-@author: HuRuiFeng
 @file: shell_exec.py
 @time: 2022/5/26 15:35
 @project: black-hat-python-2ed

@@ -4,7 +4,7 @@
 @file: aslrcheck.py
 @time: 2022/5/27 11:31
 @project: black-hat-python-2ed
-@desc: P210 查找ASLR（地址空间布局随机）保护进程
+@desc: P210 查找ASLR（地址空间布局随机化）保护进程
 """
 import io
 import logging

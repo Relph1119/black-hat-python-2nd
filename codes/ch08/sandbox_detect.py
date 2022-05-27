@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
 """
-@author: HuRuiFeng
 @file: sandbox_detect.py
 @time: 2022/5/26 16:57
 @project: black-hat-python-2ed
