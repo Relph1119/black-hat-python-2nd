@@ -4,7 +4,8 @@
 @file: scanner.py
 @time: 2022/5/23 20:03
 @project: black-hat-python-2ed
-@desc: P58 整个子网进行主机发现扫描，在Windows环境中使用系统管理员运行
+@desc: P58 在整个子网进行主机扫描
+在Windows环境中使用系统管理员运行
 """
 import ipaddress
 import os

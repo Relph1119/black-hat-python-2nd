@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
 """
-@author: HuRuiFeng
 @file: paste_exfil.py
 @time: 2022/5/26 22:05
 @project: black-hat-python-2ed

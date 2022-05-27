@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 """
-@author: HuRuiFeng
-@file: cryptor.py.py
+@file: cryptor.py
 @time: 2022/5/26 18:28
 @project: black-hat-python-2ed
 @desc: P166 文件内容的加密和解密

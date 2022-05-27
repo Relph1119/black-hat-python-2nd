@@ -4,7 +4,7 @@
 @file: netcat.py
 @time: 2022/5/23 10:13
 @project: black-hat-python-2ed
-@desc: P14，取代netcat
+@desc: P14 取代netcat
 """
 import argparse
 import shlex

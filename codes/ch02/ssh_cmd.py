@@ -4,7 +4,7 @@
 @file: ssh_cmd.py.py
 @time: 2022/5/23 15:39
 @project: black-hat-python-2ed
-@desc: P30基于Paramiko的SSH通信
+@desc: P30 基于Paramiko的SSH通信
 """
 import getpass
 

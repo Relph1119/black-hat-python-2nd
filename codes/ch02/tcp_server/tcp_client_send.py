@@ -4,7 +4,7 @@
 @file: tcp_client.py
 @time: 2022/5/23 9:55
 @project: black-hat-python-2ed
-@desc: P13，TCP客户端给服务端发送测试数据包
+@desc: P13 TCP客户端给服务端发送测试数据包
 """
 
 import socket

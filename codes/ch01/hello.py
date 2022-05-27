@@ -4,7 +4,7 @@
 @file: hello.py
 @time: 2022/5/23 9:48
 @project: black-hat-python-2ed
-@desc: P7，示例代码
+@desc: P7 示例代码
 """
 
 from lxml import etree

@@ -4,7 +4,7 @@
 @file: udp_client.py
 @time: 2022/5/23 9:59
 @project: black-hat-python-2ed
-@desc: P11，UDP客户端
+@desc: P11 UDP客户端
 """
 
 import socket

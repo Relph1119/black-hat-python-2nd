@@ -4,7 +4,7 @@
 @file: tcp_client.py
 @time: 2022/5/23 9:55
 @project: black-hat-python-2ed
-@desc: P10，TCP客户端
+@desc: P10 TCP客户端
 """
 
 import socket

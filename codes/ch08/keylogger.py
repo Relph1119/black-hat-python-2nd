@@ -4,7 +4,7 @@
 @file: keylogger.py
 @time: 2022/5/25 13:56
 @project: black-hat-python-2ed
-@desc: P151 键盘记录，
+@desc: P151 键盘记录
 在Windows下运行时，需要将venv/Lib/site-packages/pywin32_system32目录下的pythoncom38.dll、pywintypes38.dll复制到C:\Windows\System32里面
 """
 import sys

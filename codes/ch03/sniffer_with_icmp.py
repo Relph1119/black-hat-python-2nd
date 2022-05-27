@@ -4,7 +4,8 @@
 @file: sniffer_ip_header_decode.py
 @time: 2022/5/23 19:50
 @project: black-hat-python-2ed
-@desc: P57 ICMP解码器，在Windows环境中使用系统管理员运行
+@desc: P57 ICMP解码器
+在Windows环境中使用系统管理员运行
 """
 import ipaddress
 import os

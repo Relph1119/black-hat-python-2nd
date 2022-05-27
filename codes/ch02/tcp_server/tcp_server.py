@@ -4,7 +4,7 @@
 @file: tcp_server.py
 @time: 2022/5/23 10:02
 @project: black-hat-python-2ed
-@desc: P12，TCP服务端
+@desc: P12 TCP服务端
 """
 import socket
 import threading

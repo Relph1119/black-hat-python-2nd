@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 """
-@author: HuRuiFeng
-@file: bhp_fuzzer.py.py
+@file: bhp_fuzzer.py
 @time: 2022/5/24 19:55
 @project: black-hat-python-2ed
 @desc: P115 Burp模糊测试插件
